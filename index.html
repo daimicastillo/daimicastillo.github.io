@@ -1,54 +1,577 @@
+<?php
+$current_year = date("Y");
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Portafolio en Construcción</title>
-  <style>
-    body {
-      background-color: #0e0e0e;
-      color: #f2f2f2;
-      font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      margin: 0;
-      flex-direction: column;
-    }
-    h1 {
-      font-size: 3em;
-    }
-    p {
-      font-size: 1.2em;
-      color: #aaa;
-      margin: 10px 0;
-    }
-    .loader {
-      margin: 40px 0;
-      border: 6px solid #444;
-      border-top: 6px solid #00bfff;
-      border-radius: 50%;
-      width: 50px;
-      height: 50px;
-      animation: spin 1s linear infinite;
-    }
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-    .contact {
-      margin-top: 20px;
-      font-size: 1em;
-      color: #00bfff;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Soporte Técnico Especializado - Soluciones rápidas y eficientes para tus problemas tecnológicos. Asistencia remota y presencial para hogares y empresas.">
+    <meta name="keywords" content="soporte técnico, asistencia informática, reparación computadoras, redes informáticas, ayuda tecnológica, solución problemas PC">
+    <meta name="author" content="Soporte Técnico Especializado">
+    
+    <title>Soporte Técnico Especializado | Asistencia Informática Profesional</title>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./assets/webfonts/css/all.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 <body>
-  <h1>🚧 En Construcción 🚧</h1>
-  <div class="loader"></div>
-  <p>Estoy trabajando en algo genial. ¡Vuelve pronto!</p>
-  <p class="contact">📞 Contáctame: <a href="tel:+5358106016" style="color: #00bfff;">+53 58106016</a></p>
+    <!-- Barra de navegación -->
+    <header class="main-header">
+        <nav class="navbar">
+            <a href="#" class="logo">
+                <img src="./assets/images/logo/logo.png" alt="Logo Soporte Técnico" class="logo-img"> Soporte Técnico
+            </a>
+            <button class="sidebar-toggle" aria-expanded="false" aria-controls="sidebar">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-list">
+                <li><a href="#about" class="nav-link"><i class="fas fa-user"></i> Sobre Mí</a></li>
+                <li><a href="#services" class="nav-link"><i class="fas fa-tools"></i> Servicios</a></li>
+                <li><a href="#solutions" class="nav-link"><i class="fas fa-lightbulb"></i> Soluciones</a></li>
+                <li><a href="#pricing" class="nav-link"><i class="fas fa-tag"></i> Precios</a></li>
+                <li><a href="#contact" class="nav-link"><i class="fas fa-phone-alt"></i> Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <div class="sidebar-overlay"></div>
+    <aside id="sidebar" class="sidebar" aria-hidden="true">
+        <button class="close-sidebar"><i class="fas fa-times"></i></button>
+        <nav class="sidebar-nav">
+            <ul class="sidebar-list">
+                <li><a href="#about" class="sidebar-link"><i class="fas fa-user"></i> Sobre Mí</a></li>
+                <li><a href="#services" class="sidebar-link"><i class="fas fa-tools"></i> Servicios</a></li>
+                <li><a href="#solutions" class="sidebar-link"><i class="fas fa-lightbulb"></i> Soluciones</a></li>
+                <li><a href="#pricing" class="sidebar-link"><i class="fas fa-tag"></i> Precios</a></li>
+                <li><a href="#contact" class="sidebar-link"><i class="fas fa-phone-alt"></i> Contacto</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Contenido principal -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="particles" id="particles-js"></div>
+            <div class="container">
+                <h1>Soluciones técnicas rápidas y confiables</h1>
+                <p class="subtitle">Asistencia informática profesional cuando más la necesitas</p>
+                <p class="hero-text">Ofrezco soporte técnico especializado para resolver tus problemas informáticos de manera eficiente, ya sea en tu hogar o negocio.</p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="cta-button">Solicitar Ayuda</a>
+                    <a href="#pricing" class="cta-button secondary">Ver Precios</a>
+                </div>
+                
+                <!-- Botón de desplazamiento hacia abajo -->
+                <div class="scroll-down">
+                    <a href="#about" class="scroll-down-btn" aria-label="Desplazarse hacia abajo">
+                        <svg width="30px" height="30px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Mí -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">Sobre Mí</h2>
+                <div class="about-grid">
+                    <div class="about-content">
+                        <p>Soy un especialista en soporte técnico con más de 10 años de experiencia resolviendo problemas informáticos para hogares y pequeñas empresas. Mi enfoque es proporcionar soluciones rápidas, efectivas y con un trato personalizado.</p>
+                        
+                        <div class="about-features">
+                            <div class="feature-item">
+                                <i class="fas fa-medal feature-icon"></i>
+                                <h3>Experiencia</h3>
+                                <p>Más de una década resolviendo problemas técnicos de diversa complejidad con excelentes resultados.</p>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-clock feature-icon"></i>
+                                <h3>Disponibilidad</h3>
+                                <p>Servicio rápido con horarios flexibles, incluyendo fines de semana y emergencias.</p>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-thumbs-up feature-icon"></i>
+                                <h3>Garantía</h3>
+                                <p>Todos mis trabajos incluyen garantía de 30 días. Si el problema persiste, lo resuelvo sin costo adicional.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="stats-grid">
+                            <div class="stat-box">
+                                <span class="stat-number">10+</span>
+                                <span class="stat-text">Años de experiencia</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-number">500+</span>
+                                <span class="stat-text">Clientes satisfechos</span>
+                            </div>
+                            <div class="stat-box">
+                                <span class="stat-number">24/7</span>
+                                <span class="stat-text">Soporte urgente</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <img src="./assets/images/marketing/technical-support.png" alt="Especialista en soporte técnico">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios -->
+        <section id="services" class="section services-section">
+            <div class="container">
+                <h2 class="section-title">Mis Servicios</h2>
+                <p class="section-subtitle">Soluciones técnicas para tus necesidades informáticas</p>
+                
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-desktop"></i>
+                        </div>
+                        <h3>Soporte a Computadoras</h3>
+                        <p>Diagnóstico y reparación de hardware y software, eliminación de virus, optimización del sistema y actualizaciones.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>Redes y Conectividad</h3>
+                        <p>Configuración de redes domésticas y empresariales, solución de problemas de conexión y optimización de WiFi.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3>Soporte Remoto</h3>
+                        <p>Asistencia inmediata a distancia para resolver problemas sin necesidad de desplazamiento físico.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Recuperación de Datos</h3>
+                        <p>Recuperación de archivos eliminados o dañados en discos duros, memorias USB y otros dispositivos.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <h3>Backup y Seguridad</h3>
+                        <p>Copias de seguridad automatizadas y soluciones de seguridad para proteger tu información.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Soporte a Dispositivos</h3>
+                        <p>Configuración y solución de problemas en smartphones, tablets, impresoras y otros dispositivos.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Soluciones Comunes -->
+        <section id="solutions" class="section technologies-section">
+            <div class="container">
+                <h2 class="section-title">Problemas Frecuentes que Resuelvo</h2>
+                <p class="section-subtitle">Soluciones rápidas para los problemas técnicos más comunes</p>
+                
+                <div class="tech-tabs">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="hardware">Hardware</button>
+                        <button class="tab-button" data-tab="software">Software</button>
+                        <button class="tab-button" data-tab="network">Redes</button>
+                        <button class="tab-button" data-tab="security">Seguridad</button>
+                    </div>
+                    
+                    <div class="tab-content active" id="hardware">
+                        <div class="tech-grid">
+                            <div class="tech-item">
+                                <i class="fas fa-tachometer-alt tech-icon"></i>
+                                <span>Computadora lenta</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-power-off tech-icon"></i>
+                                <span>No enciende</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-fan tech-icon"></i>
+                                <span>Sobrecalentamiento</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-hdd tech-icon"></i>
+                                <span>Disco duro dañado</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-battery-quarter tech-icon"></i>
+                                <span>Problemas de batería</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-print tech-icon"></i>
+                                <span>Impresoras</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="software">
+                        <div class="tech-grid">
+                            <div class="tech-item">
+                                <i class="fas fa-bug tech-icon"></i>
+                                <span>Errores del sistema</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-virus tech-icon"></i>
+                                <span>Infección por virus</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-download tech-icon"></i>
+                                <span>Instalación de programas</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-sync-alt tech-icon"></i>
+                                <span>Actualizaciones del sistema</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-exclamation-triangle tech-icon"></i>
+                                <span>Pantallas azules</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-cog tech-icon"></i>
+                                <span>Configuración del sistema</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="network">
+                        <div class="tech-grid">
+                            <div class="tech-item">
+                                <i class="fas fa-wifi tech-icon"></i>
+                                <span>Problemas de WiFi</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-ethernet tech-icon"></i>
+                                <span>Conexión por cable</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-server tech-icon"></i>
+                                <span>Configuración de redes</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-share-alt tech-icon"></i>
+                                <span>Compartir archivos</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-video tech-icon"></i>
+                                <span>Videollamadas</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-globe tech-icon"></i>
+                                <span>Problemas de Internet</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-content" id="security">
+                        <div class="tech-grid">
+                            <div class="tech-item">
+                                <i class="fas fa-shield-alt tech-icon"></i>
+                                <span>Protección antivirus</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-lock tech-icon"></i>
+                                <span>Contraseñas perdidas</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-user-secret tech-icon"></i>
+                                <span>Privacidad en línea</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-cloud-upload-alt tech-icon"></i>
+                                <span>Copias de seguridad</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-fire-extinguisher tech-icon"></i>
+                                <span>Recuperación de datos</span>
+                            </div>
+                            <div class="tech-item">
+                                <i class="fas fa-fingerprint tech-icon"></i>
+                                <span>Seguridad informática</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Precios -->
+        <section id="pricing" class="section projects-section">
+            <div class="container">
+                <h2 class="section-title">Tarifas y Planes</h2>
+                <p class="section-subtitle">Soluciones accesibles para cada necesidad</p>
+                
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="./assets/images/projects/soporte-basico.jpg" alt="Soporte Básico">
+                        </div>
+                        <div class="project-info">
+                            <h3>Soporte Básico</h3>
+                            <p>Solución de problemas comunes, instalación de programas básicos, limpieza de sistema.</p>
+                            <div class="project-tech">
+                                <span>$30/hora</span>
+                                <span>Presencial</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="./assets/images/projects/soporte-remoto.jpg" alt="Soporte Remoto">
+                        </div>
+                        <div class="project-info">
+                            <h3>Soporte Remoto</h3>
+                            <p>Asistencia inmediata a distancia para problemas de software y configuración.</p>
+                            <div class="project-tech">
+                                <span>$20/hora</span>
+                                <span>Online</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="./assets/images/projects/soporte-premium.jpg" alt="Soporte Premium">
+                        </div>
+                        <div class="project-info">
+                            <h3>Soporte Premium</h3>
+                            <p>Solución integral incluyendo hardware, software y redes. Incluye garantía extendida.</p>
+                            <div class="project-tech">
+                                <span>$50/hora</span>
+                                <span>Presencial</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center">
+                    <a href="#contact" class="cta-button">Consultar paquetes empresariales</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonios -->
+        <section class="section testimonial-section">
+            <div class="container">
+                <h2 class="section-title">Clientes Satisfechos</h2>
+                <p class="section-subtitle">Lo que dicen mis clientes sobre mi trabajo</p>
+                
+                <div class="services-grid">
+                    <div class="service-card testimonial-card">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left quote-icon"></i>
+                            <p>Excelente servicio! Resolvió mi problema de red en menos de una hora cuando otros técnicos no pudieron en días. Muy profesional y amable.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="./assets/images/testimonials/client1.jpg" alt="Cliente 1" class="author-avatar">
+                            <div>
+                                <h4>Carlos Martínez</h4>
+                                <p>Dueño de negocio</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card testimonial-card">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left quote-icon"></i>
+                            <p>Recuperó todos los archivos de mi disco duro dañado cuando ya había perdido las esperanzas. El servicio vale cada centavo.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="./assets/images/testimonials/client2.jpg" alt="Cliente 2" class="author-avatar">
+                            <div>
+                                <h4>Ana Rodríguez</h4>
+                                <p>Profesora universitaria</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card testimonial-card">
+                        <div class="testimonial-content">
+                            <i class="fas fa-quote-left quote-icon"></i>
+                            <p>Contraté su servicio de mantenimiento preventivo para mi empresa y desde entonces no hemos tenido problemas mayores. Muy recomendable.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="./assets/images/testimonials/client3.jpg" alt="Cliente 3" class="author-avatar">
+                            <div>
+                                <h4>José Pérez</h4>
+                                <p>Gerente de oficina</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <h2 class="section-title">Contacto</h2>
+                <p class="section-subtitle">¿Necesitas ayuda técnica? Escríbeme o llámame ahora</p>
+                
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h3>Zona de Cobertura</h3>
+                                <p>Sancti Spíritus y municipios aledaños</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>soporte.tecnico@ejemplo.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h3>Teléfono</h3>
+                                <p>+53 54850578</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>Horario de Atención</h3>
+                                <p>Lunes a Viernes: 8:00 AM - 6:00 PM</p>
+                                <p>Sábados: 9:00 AM - 2:00 PM</p>
+                                <p>Emergencias: 24/7</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-social">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Nombre completo" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Correo electrónico" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" id="phone" name="phone" placeholder="Teléfono de contacto">
+                        </div>
+                        
+                        <div class="form-group">
+                            <select id="service" name="service" required>
+                                <option value="">Selecciona un servicio</option>
+                                <option value="soporte-presencial">Soporte Presencial</option>
+                                <option value="soporte-remoto">Soporte Remoto</option>
+                                <option value="reparacion-hardware">Reparación de Hardware</option>
+                                <option value="redes-conectividad">Redes y Conectividad</option>
+                                <option value="recuperacion-datos">Recuperación de Datos</option>
+                                <option value="otro">Otro servicio</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <textarea id="message" name="message" rows="5" placeholder="Describe tu problema o necesidad..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-button">Solicitar Soporte <i class="fas fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <img src="./assets/images/logo/logo.png" alt="Soporte Técnico" class="footer-logo">
+                    <p>Soluciones técnicas rápidas y confiables para hogares y pequeñas empresas.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h3>Enlaces</h3>
+                    <ul>
+                        <li><a href="#about">Sobre Mí</a></li>
+                        <li><a href="#services">Servicios</a></li>
+                        <li><a href="#solutions">Soluciones</a></li>
+                        <li><a href="#pricing">Precios</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-services">
+                    <h3>Servicios</h3>
+                    <ul>
+                        <li><a href="#">Soporte a Computadoras</a></li>
+                        <li><a href="#">Redes y Conectividad</a></li>
+                        <li><a href="#">Soporte Remoto</a></li>
+                        <li><a href="#">Recuperación de Datos</a></li>
+                        <li><a href="#">Seguridad Informática</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-contact">
+                    <h3>Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Sancti Spíritus, Cuba</p>
+                    <p><i class="fas fa-envelope"></i> soporte.tecnico@ejemplo.com</p>
+                    <p><i class="fas fa-phone-alt"></i> +53 54850578</p>
+                    <p><i class="fas fa-clock"></i> Lun-Vie: 8AM-6PM</p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <?php echo $current_year; ?> Soporte Técnico Especializado. Todos los derechos reservados.</p>
+                <div class="legal-links">
+                    <a href="#">Política de Privacidad</a>
+                    <a href="#">Términos de Servicio</a>
+                    <a href="#">Garantías</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón WhatsApp -->
+    <a href="https://wa.me/5354850578" class="whatsapp-float" target="_blank" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="./assets/js/main.js"></script>
 </body>
 </html>
-
