@@ -2,7 +2,7 @@
 
 ![Preview del portafolio](images/preview.jpg)
 
-Portafolio profesional de Edisbel Ramírez Lovatos, Desarrollador Full Stack.
+Portafolio profesional de Daimi Castillo Triana, Technical Support Specialist.
 
 ## Características
 
